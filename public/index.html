@@ -4,11 +4,45 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>CS193x Final Project</title>
-    <link rel="stylesheet" href="/css/style.css"/>
-    <script src="/js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/script.js" defer></script>
     </script>
   </head>
   <body>
     <!-- TODO(you): Add the HTML necessary to complete your final project. -->
+
+    <div class="container">
+      <div class="header">
+        <!-- add date attribute -->
+        <div id="date">
+          Wed, Jun 18
+        </div>
+      </div>
+
+      <div class="content">
+        <ul class="task-list">
+
+          <li class="task">
+            <input id="check-box" type="checkbox">
+            <span class="task-text">write final project</span>
+            <div class="fa fa-trash-o trash"></div>
+          </li>
+
+          <li class="task">
+              <input id="check-box" type="checkbox">
+              <span class="task-text line">write final project</span>
+              <div class="fa fa-trash-o trash"></div>
+            </li>
+        </ul>
+      </div>
+        
+      <div class="add-list">
+          <i class="fa fa-plus-circle button"></i>
+        <input id="task" type="text">
+      </div>
+    </div>
+    
+
   </body>
 </html>

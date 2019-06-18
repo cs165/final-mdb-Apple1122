@@ -1,3 +1,112 @@
 /**
  * TODO(you): Add the CSS necessary to complete your final project.
  **/
+ body {
+    padding: 10px;
+    margin: 0;
+    background-color: rgba(0,0,0,0.1);
+}
+.container {
+    padding: 10px;
+    width: 380px;
+    margin: 0 auto;
+}
+.header{
+   width: 380px;
+   height: 200px;
+   background-image: url('../img/sky.jpeg');
+   background-size: 100% 200%;
+   background-repeat: no-repeat;
+   border-radius: 15px 15px 0 0;
+   position: relative;
+}
+#date {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgb(39, 147, 255);
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif';
+}
+
+.content {
+    width: 380px;
+    height: 350px;
+    max-height: 350px;
+    background-color: blanchedalmond;
+    overflow: auto;
+}
+.content ul {
+    padding: 0;
+    margin: 0;
+}
+.content ul li {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.content ul li input#check-box {
+    width: 20px;
+    height: 20px;
+}
+.content ul li span.task-text {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    left: 50px;
+    background-color: blanchedalmond;
+    max-width: 285px;
+    width: 285px;
+}
+.content ul li span.line{
+    text-decoration: line-through;
+    color : #ccc;
+}
+.content ul li div.trash{
+    position: absolute;
+    right: 15px;
+    font-size: 25px;
+}
+.task {
+    width: 380px;
+    height: 45px;
+    min-height: 45px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.add-list {
+    position: relative;
+    width: 360px;
+    height: 40px;
+    background: blanchedalmond;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.add-list i.button {
+    width: 40px;
+    height: 35px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    color: blueviolet;
+}
+.add-list #task {
+    position: absolute;
+    left: 50px;
+    height: 35px;
+    width: 300px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+
+
