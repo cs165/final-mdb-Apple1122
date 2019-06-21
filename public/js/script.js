@@ -2,33 +2,44 @@
 // TODO(you): Add the JavaScript necessary to complete your final project.
 //
 
-const list = document.querySelector("task-list");
+// Select the Elements
+const dateElement = document.getElementById('date');
+const list = document.getElementById("task-list");
+const input = document.getElementById('task');
 
-function addTask(taskItem)
+// list id
+var id = 1;
+
+// show today date
+var date = new Date();
+dateElement.innerHTML = date.toDateString();
+
+function addTask(taskText)
 {
-    // const htmlText =`<li class="task">
-    //                         <div id="check-box"></div>
-    //                         <span id="task-text"></span>
-    //                         <div id="trash"></div>
-    //                  </li>`
+    var htmlText =`<li class="task">
+                        <input class="box-${id}" id="check-box" type="checkbox">
+                        <span class="task-text">${taskText}</span>
+                        <div class="fa fa-trash-o trash"></div>
+                    </li>`;
+    list.insertAdjacentHTML('beforeend', htmlText);
 
-    list = document.createElement('li');
-    list.classList.add('task');
+    let currentCheckbox = document.querySelector(".box-" + id);
+    let trash = currentCheckbox.parentNode.querySelector(".trash");
+
+    console.log("current:" + currentCheckbox);
+    console.log("parent" + currentCheckbox.parentNode)
     
-    const checkBox = document.createElement('div');
-    checkBox.classList.add('check-box');
+    currentCheckbox.addEventListener('change', () => {
+        currentCheckbox.parentNode.querySelector(".task-text").classList.toggle('line');
+    });
+    
+    trash.addEventListener('click', () => {
+        currentCheckbox.parentNode.parentNode.removeChild(currentCheckbox.parentNode);
+    });
 
-    const text = document.createElement('p');
-    text.textContent = taskItem;
-    text.classList.add('task-text');
-
-    const trash = document.createElement('div');
-    trash.classList.add('trash');
-
-    list.appendChild(checkBox);
-    list.appendChild(text);
-    list.appendChild(trash);
+    id++;
 }
+
 
 
 // const input = document.querySelector('add-list').getAttributeById('task');
